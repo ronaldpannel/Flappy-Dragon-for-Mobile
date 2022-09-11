@@ -99,6 +99,23 @@ window.addEventListener("keydown", function (e) {
   }
 });
 
+window.addEventListener('touchstart', function(e){
+console.log(e)
+spacePressed = true;
+  
+})
+
+window.addEventListener('touchmove', function () {
+
+
+});
+
+window.addEventListener('touchend', function () {
+  spacePressed = false;
+  bird.frameX = 0;
+
+});
+
 const bang = new Image();
 bang.src = "bang.png";
 
