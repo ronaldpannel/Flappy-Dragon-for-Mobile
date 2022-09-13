@@ -34,7 +34,7 @@ class Bird {
     }
   }
   flap() {
-    this.y -= 10;
+    this.y -= 15;
     if(this.frameX >= 3)this.frameX = 0
     else if(frame%4 === 0)this.frameX++
   }
