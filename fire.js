@@ -11,7 +11,7 @@ class FireParticle {
     this.color = "hsl(24, 100%, 50%)";
     this.size = 15;
     this.spreadY = Math.random() * 0.5 + -0.5;
-    this.vel = gameSpeed * 6 ;
+    this.vel = gameSpeed * 6;
   }
   update() {
     this.x += this.vel;

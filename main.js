@@ -138,7 +138,7 @@ function collision() {
       ctx.fillStyle = "white";
       ctx.fillText("Game Over Your Score =  " + score, 200, canvas.height / 2);
       ctx.fillText(
-        "Press Space to fly Dragon, and S to shoot Fire Balls",
+        "Tap fly to control dragon and fire to shoot fireballs",
         100,
         canvas.height / 2 + 20
       );
