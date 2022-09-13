@@ -6,6 +6,8 @@ canvas.width = 600;
 canvas.height = 400;
 const button = document.getElementById("btn");
 const hsResetBtn = document.getElementById("hsBtn");
+const flyButton = document.getElementById("flyBtn");
+const fireButton = document.getElementById("shotBtn");
 let spacePressed = false;
 let sPressed = false;
 let angle = 0;
@@ -99,21 +101,20 @@ window.addEventListener("keydown", function (e) {
   }
 });
 
-window.addEventListener('touchstart', function(e){
-console.log(e)
-spacePressed = true;
-  
-})
-
-window.addEventListener('touchmove', function () {
-
-
+flyButton.addEventListener("touchstart", function (e) {
+  e.preventDefault();
+  spacePressed = true;
 });
 
-window.addEventListener('touchend', function () {
+flyButton.addEventListener("touchend", function (e) {
+  e.preventDefault();
   spacePressed = false;
   bird.frameX = 0;
+});
 
+fireButton.addEventListener("touchstart", function (e) {
+  e.preventDefault();
+   fireParticles.push(new FireParticle());
 });
 
 const bang = new Image();
@@ -142,7 +143,7 @@ function collision() {
         canvas.height / 2 + 20
       );
       button.classList.add("active");
-      hsResetBtn.classList.add('active')
+      hsResetBtn.classList.add("active");
       animate = false;
       return true;
     }
@@ -158,5 +159,5 @@ hsResetBtn.addEventListener("click", resetHighScore);
 
 function resetHighScore() {
   localStorage.setItem("fbHighScore", 0);
-   window.location.reload();
+  window.location.reload();
 }
