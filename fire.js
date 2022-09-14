@@ -37,7 +37,7 @@ function handleFireParticles() {
   for (let i = 0; i < fireParticles.length; i++) {
     fireParticles[i].update();
     fireParticles[i].show();
-    if (fireParticles[i].x > canvas.width - 50) {
+    if (fireParticles[i].x > canvas.width + 50) {
       fireParticles.splice(i, 1);
     }
   }

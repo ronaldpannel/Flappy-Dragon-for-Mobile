@@ -30,7 +30,7 @@ class Enemy {
 }
 
 function handleEnemies() {
-  if (frame % 200 === 0) {
+  if (frame % 150 === 0) {
     enemies.unshift(new Enemy());
   }
   for (let i = 0; i < enemies.length; i++) {

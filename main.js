@@ -114,7 +114,7 @@ flyButton.addEventListener("touchend", function (e) {
 
 fireButton.addEventListener("touchstart", function (e) {
   e.preventDefault();
-   fireParticles.push(new FireParticle());
+  fireParticles.push(new FireParticle());
 });
 
 const bang = new Image();
@@ -132,7 +132,7 @@ function collision() {
         bird.x < pipes[i].x + pipes[i].width &&
         bird.y + bird.w > canvas.height - pipes[i].bot)
     ) {
-      crashSound.play(bird);
+      crashSound.play();
       ctx.drawImage(bang, bird.x, bird.y - 40, 80, 80);
       ctx.font = "20px Aerial";
       ctx.fillStyle = "white";
