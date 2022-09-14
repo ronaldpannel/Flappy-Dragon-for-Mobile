@@ -132,8 +132,8 @@ function collision() {
         bird.x < pipes[i].x + pipes[i].width &&
         bird.y + bird.w > canvas.height - pipes[i].bot)
     ) {
-      crashSound.play();
       ctx.drawImage(bang, bird.x, bird.y - 40, 80, 80);
+      crashSound.play();
       ctx.font = "20px Aerial";
       ctx.fillStyle = "white";
       ctx.fillText("Game Over Your Score =  " + score, 200, canvas.height / 2);

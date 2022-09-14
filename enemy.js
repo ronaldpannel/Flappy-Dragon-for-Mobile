@@ -5,7 +5,7 @@ let enemy;
 class Enemy {
   constructor() {
     this.x = canvas.width;
-    this.y = (Math.random() * canvas.height) - 50;
+    this.y = Math.random() * canvas.height - 50;
     this.size = 50;
     this.vel = gameSpeed * 3;
   }
@@ -47,8 +47,8 @@ function enemyCollision() {
     let dy = bird.y - enemies[i].y;
     let distance = Math.sqrt(dx * dx + dy * dy);
     if (distance < bird.size + enemies[i].size) {
-      crashSound.play(bird);
       ctx.drawImage(bang, bird.x, bird.y - 40, 80, 80);
+      crashSound.play(bird);
       ctx.font = "20px Aerial";
       ctx.fillStyle = "white";
       ctx.fillText("Game Over Your Score =  " + score, 200, canvas.height / 2);
